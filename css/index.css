@@ -1,28 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+
     font-family: 'Noto Sans', sans-serif;
 }
 
-body{
+body {
     background-color: rgb(15, 17, 30);
     color: #f0f8ff;
     font-size: 150%;
 }
 
-a{
+a {
     text-decoration: none;
     color: #f0f8ff;
 
 }
 
-a:hover{
+a:hover {
     color: aquamarine;
-    
+
 }
 
-body article{
+body article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,10 +31,58 @@ body article{
     gap: 30px;
 }
 
-.img-responsive{
+.img-responsive {
     margin: 0 auto;
     width: 210px;
     height: auto;
     border-radius: 100px;
     box-shadow: 0 0 50px white;
+}
+
+.tab {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+    
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: aquamarine;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+
+    animation: fadeEffect 1s;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
