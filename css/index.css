@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: aquamarine;
+    filter:brightness(100%)
 
 }
 
@@ -72,10 +72,142 @@ body article {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-
+    margin-top: 20px;
     animation: fadeEffect 1s;
 }
 
+.icon1{
+    width: 24px;
+    height: 24px;
+    filter: invert();
+}
+
+.tab1{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 40px;
+    
+}
+
+.tabimg{
+    width: 25vw;
+    border-radius: 20px;
+}
+
+.overlay{
+    position: absolute;
+    border-radius: 20px;
+
+    opacity: 0;
+    
+
+    transition: opacity 0.3s ease-in-out;
+
+    cursor: pointer;
+
+
+}
+
+h6{
+    font-weight: lighter;
+}
+
+.content{
+    position:absolute;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+   transform: translate(8vw, -20vw);
+    color: aquamarine;
+    
+    text-align: center;
+
+}
+
+.tab2{
+    border-radius: 20px;
+    box-shadow: 0 0 15px blueviolet;
+}
+
+.tab2:hover .overlay{
+    opacity: 1;
+    
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.tab2:hover .tabimg{
+    box-shadow: 0 0 15px aquamarine;
+    opacity: .32;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.youtubeimg{
+    min-width: 100%;
+    height: auto;
+
+}
+
+.tab4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 70px;
+    
+}
+
+.tabimg2{
+    width: 40vw;
+    border-radius: 20px;
+}
+.tab3:hover .overlay{
+    opacity: 1;
+    
+    transition: opacity 0.5s ease-in-out;
+}
+.tab3:hover .tabimg2{
+    box-shadow: 0 0 15px aquamarine;
+    opacity: .32;
+    transition: opacity 0.5s ease-in-out;
+}
+.content2{
+    position:absolute;
+    border-radius: 20px;
+    
+    top: 50%;
+    left: 50%;
+   transform: translate(12vw, -18vw);
+    color: aquamarine;
+    width: 180px;
+    align-items: center;
+    text-align:center;
+    
+
+}
+
+@media (max-width: 500px) {
+    .tabimg{
+        width: 40vw;
+    }
+    .tabimg2{
+        width: 70vw;
+    }
+    .tab1{
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .content{
+       transform: translate(8vw, -30vw);
+    }
+
+    .content2{
+       transform: translate(10vw, -30vw);
+    }
+    
+}
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
     from {
